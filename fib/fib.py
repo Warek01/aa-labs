@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 import numpy as np
 
 
@@ -114,18 +116,18 @@ def implicit_matrix(n: int) -> int:
 	return a
 
 
-def gratio(n):
+def gratio(n: int) -> Decimal:
 	if n < 6:
-		return gratio.f[n]
+		return Decimal(gratio.f[n])
 
 	t = 5
 	fn = 5
 
 	while t < n:
-		fn = round(fn * gratio.PHI)
+		fn = round(Decimal(fn) * Decimal(gratio.PHI))
 		t += 1
 
-	return fn
+	return Decimal(fn)
 
 
 gratio.PHI = 1.6180339

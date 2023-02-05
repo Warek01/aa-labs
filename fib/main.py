@@ -22,8 +22,8 @@ data = {
 	'Eigenvalue optimized': []
 }
 
-A = 20
-B = 30
+A = 0
+B = 20
 
 for n in range(A, B + 1):
 	for (name, f) in funcs:
