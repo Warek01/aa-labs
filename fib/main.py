@@ -22,7 +22,7 @@ data = {
 	'Eigenvalue optimized': []
 }
 
-A = 0
+A = 20
 B = 30
 
 for n in range(A, B + 1):
@@ -33,13 +33,13 @@ for n in range(A, B + 1):
 		data[name] += [elapsed.microseconds]
 
 plt.plot(
-	data['Cheating'], 'r',
-	data['Recursive'], 'b',
-	data['Iterative'], 'g',
-	data['Golden ratio'], 'y',
-	data['Eigenvalue'], 'k',
-	data['Eigenvalue fast exponentiation'], 'm',
-	data['Eigenvalue optimized'], 'c'
+	[i for i in range(A, B + 1)], data['Cheating'], 'r',
+	[i for i in range(A, B + 1)], data['Recursive'], 'b',
+	[i for i in range(A, B + 1)], data['Iterative'], 'g',
+	[i for i in range(A, B + 1)], data['Golden ratio'], 'y',
+	[i for i in range(A, B + 1)], data['Eigenvalue'], 'k',
+	[i for i in range(A, B + 1)], data['Eigenvalue fast exponentiation'], 'm',
+	[i for i in range(A, B + 1)], data['Eigenvalue optimized'], 'c'
 )
 plt.xlabel('N')
 plt.ylabel('μs')
