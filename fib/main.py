@@ -7,9 +7,9 @@ funcs = [
 	('Recursive', fib.recursive),
 	('Iterative', fib.iterative),
 	('Golden ratio', fib.gratio),
-	('Matrix', fib.matrix),
-	('Matrix fast exponentiation', fib.exponentiation),
-	('Matrix implicit', fib.implicit_matrix)
+	('Eigenvalue', fib.matrix),
+	('Eigenvalue fast exponentiation', fib.exponentiation),
+	('Eigenvalue optimized', fib.implicit_matrix)
 ]
 
 data = {
@@ -17,9 +17,9 @@ data = {
 	'Recursive': [],
 	'Iterative': [],
 	'Golden ratio': [],
-	'Matrix': [],
-	'Matrix fast exponentiation': [],
-	'Matrix implicit': []
+	'Eigenvalue': [],
+	'Eigenvalue fast exponentiation': [],
+	'Eigenvalue optimized': []
 }
 
 A = 0
@@ -37,9 +37,9 @@ plt.plot(
 	data['Recursive'], 'b',
 	data['Iterative'], 'g',
 	data['Golden ratio'], 'y',
-	data['Matrix'], 'k',
-	data['Matrix fast exponentiation'], 'm',
-	data['Matrix implicit'], 'c'
+	data['Eigenvalue'], 'k',
+	data['Eigenvalue fast exponentiation'], 'm',
+	data['Eigenvalue optimized'], 'c'
 )
 plt.xlabel('N')
 plt.ylabel('μs')
